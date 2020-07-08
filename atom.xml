@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>East Blue</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://sujinfeng.github.io/"/>
+  <updated>2020-07-08T01:13:10.495Z</updated>
+  <id>http://sujinfeng.github.io/</id>
+  
+  <author>
+    <name>susu</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vue问题更新</title>
+    <link href="http://sujinfeng.github.io/2020/07/08/vue-log/"/>
+    <id>http://sujinfeng.github.io/2020/07/08/vue-log/</id>
+    <published>2020-07-08T01:07:02.000Z</published>
+    <updated>2020-07-08T01:13:10.495Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-老项目down下来之后，报错。"><a href="#1-老项目down下来之后，报错。" class="headerlink" title="1.老项目down下来之后，报错。"></a>1.老项目down下来之后，报错。</h2><p>我不确定是不是因为vue-cli从3.X升级为4.X带来的原因，我在对项目install之后，npm run serve运行的时候，报以下错误。截取部分错误提示：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1.Error: [BABEL] D:\devwork\vuework\bricnetwork\src\main.js: Cannot find module &#39;@babel&#x2F;compat-data&#x2F;corejs3-shipped-proposals&#39;</span><br></pre></td></tr></table></figure><h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>下载依赖 npm install @babel/compat-data。但是原项目并不需要下载这个依赖，这点，我不是很懂。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;1-老项目down下来之后，报错。&quot;&gt;&lt;a href=&quot;#1-老项目down下来之后，报错。&quot; class=&quot;headerlink&quot; title=&quot;1.老项目down下来之后，报错。&quot;&gt;&lt;/a&gt;1.老项目down下来之后，报错。&lt;/h2&gt;&lt;p&gt;我不确定是不是因为v
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>hexo的搭建记录</title>
+    <link href="http://sujinfeng.github.io/2020/07/07/hexo-create/"/>
+    <id>http://sujinfeng.github.io/2020/07/07/hexo-create/</id>
+    <published>2020-07-07T07:17:46.172Z</published>
+    <updated>2020-07-07T07:17:46.172Z</updated>
+    
+    <content type="html"><![CDATA[<p>第一次使用<a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! 进行博客搭建所以对过程进行一个记录！</p><h2 id="首先，hexo的加载"><a href="#首先，hexo的加载" class="headerlink" title="首先，hexo的加载!"></a>首先，hexo的加载!</h2><p>（忽略nodejs安装）以下是官网提供的快速搭建命令，直接使用</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br><span class="line">$ hexo init blog</span><br><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">$ npm install</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>hexo server之后就可以看到</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure><p>根据提示，在浏览器输入<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> ，即可查看</p><h2 id="第二步，上传至github"><a href="#第二步，上传至github" class="headerlink" title="第二步，上传至github!"></a>第二步，上传至github!</h2><p>在github创建以sujinfeng.github.io为项目名的项目！</p><p><img src= "/img/loading.gif" data-src="https://visugar.oss-cn-shenzhen.aliyuncs.com/article/setuphexo/create-repo.png" alt="dd"></p><h3 id="然后需要修改blog根目录地下的-config-yml文件"><a href="#然后需要修改blog根目录地下的-config-yml文件" class="headerlink" title="然后需要修改blog根目录地下的_config.yml文件"></a>然后需要修改blog根目录地下的<font color = red>_config.yml</font>文件</h3><p>添加</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: https://github.com/sujinfeng/sujinfeng.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><p>然后加载依赖</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure><p>最后上传至github </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo generate</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>然后sujinfeng.github.io就能看到自己的项目了</p><h2 id="删除文章"><a href="#删除文章" class="headerlink" title="删除文章"></a>删除文章</h2><p>到目录/source/_posts下删除相应的文章，然后执行更新发布！</p><h2 id="更新发布"><a href="#更新发布" class="headerlink" title="更新发布"></a>更新发布</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure><h2 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h2><p>直接在根目录执行</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone -b master https:&#x2F;&#x2F;github.com&#x2F;jerryc127&#x2F;hexo-theme-butterfly.git themes&#x2F;butterfly</span><br></pre></td></tr></table></figure><p>修改<font color = red>_config.yml</font>的theme参数为主题名称：butterfly</p><h3 id="bug"><a href="#bug" class="headerlink" title="bug"></a>bug</h3><p>Hexo更改主题后启动服务器，界面显如下字符:<br><core style='color:red;background:#ddd;padding:5px 15px'>extends includes/layout.pug block content include includes/recent-posts.pug include includes/partial</core></p><p>执行以下命令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-renderer-jade hexo-generator-feed hexo-generator-sitemap hexo-browsersync hexo-generator-archive</span><br></pre></td></tr></table></figure><p>清除缓存<br><core style='color:red;background:#fdd;padding:2px 5px'>hexo clean</core></p><p>生成静态文件即可<br><core style='color:red;background:#fdd;padding:2px 5px'>hexo g</core></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;第一次使用&lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! 进行博客搭建所以对过程进行一个记录！&lt;/p&gt;
+&lt;h2 id=&quot;首先，hexo的加载&quot;&gt;&lt;a href=&quot;#首先，hexo的加载&quot;
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>小程序初次尝试</title>
+    <link href="http://sujinfeng.github.io/2020/07/07/wechat-create/"/>
+    <id>http://sujinfeng.github.io/2020/07/07/wechat-create/</id>
+    <published>2020-07-07T07:17:46.172Z</published>
+    <updated>2020-07-07T07:17:46.172Z</updated>
+    
+    <content type="html"><![CDATA[<p>#前言<br>本来一直都想了解下微信小程序的开发流程，结果一直拖，拖到现在，好了废话不多说。<br>本次开始尝试开发微信小程序，找到了一个很牛逼的哥们提供的指导流程，<a href="https://www.zhihu.com/question/50907897/answer/128494332" target="_blank" rel="noopener">关于微信小程序开发入门</a></p><h2 id="下载安装开发工具"><a href="#下载安装开发工具" class="headerlink" title="下载安装开发工具"></a>下载安装开发工具</h2><p>按照里面提供的流程，我先下载了，<a href="https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html" target="_blank" rel="noopener">微信开发工具</a>，</p><p>安装步骤就不多说了，直接下一步就行，我下载的是稳定版 Stable Build (1.03.2006090)<a href="https://servicewechat.com/wxa-dev-logic/download_redirect?type=x64&from=mpwiki&download_version=1032006090&version_type=1" target="_blank" rel="noopener">Windows 64</a>，</p><p>下载完成后，直接打开，选择添加小程序，第一次会需要登录，直接用微信扫一扫就行。</p><h2 id="注册成为开发者"><a href="#注册成为开发者" class="headerlink" title="注册成为开发者"></a>注册成为开发者</h2><p>创建了第一个小程序之后，看着代码没啥思路，就转而进入<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/quickstart/getstart.html#%E7%94%B3%E8%AF%B7%E5%B8%90%E5%8F%B7" target="_blank" rel="noopener">简易教程</a>也就是微信自身给予的开发指南。</p><p>按顺序，进入<a href="https://mp.weixin.qq.com/cgi-bin/registermidpage?action=index&lang=zh_CN" target="_blank" rel="noopener">注册流程</a>，相对简单，不多说。</p><p>本次为个人测试，所以我注册成为    个人小程序开发。</p><h2 id="正式开始开发"><a href="#正式开始开发" class="headerlink" title="正式开始开发"></a>正式开始开发</h2><h3 id="问题一，小程序入口文件在哪？"><a href="#问题一，小程序入口文件在哪？" class="headerlink" title="问题一，小程序入口文件在哪？"></a>问题一，小程序入口文件在哪？</h3><p>小程序启动之后，在 app.js 定义的 App 实例的 onLaunch 回调会被执行，整个小程序只有一个 App 实例，是全部页面共享的</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">App(&#123;</span><br><span class="line">  onLaunch: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 小程序启动之后 触发</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><h3 id="问题二，小程序的生命周期以及执行顺序？"><a href="#问题二，小程序的生命周期以及执行顺序？" class="headerlink" title="问题二，小程序的生命周期以及执行顺序？"></a>问题二，小程序的生命周期以及执行顺序？</h3><p>这个回头补，还没理解透！</p><h3 id="问题三，为什么我直接在wxss里修改button的样式，部分样式不起作用？"><a href="#问题三，为什么我直接在wxss里修改button的样式，部分样式不起作用？" class="headerlink" title="问题三，为什么我直接在wxss里修改button的样式，部分样式不起作用？"></a>问题三，为什么我直接在wxss里修改button的样式，部分样式不起作用？</h3><p>在做测试页面的时候，对页面中的button做了一个简单的样式修改，可是宽度无论怎么修改都无法被改变，通过检查工具发现，样式是没错的，但是表现的样子却不是我想要的。<br>在网上查<a href="https://blog.csdn.net/qq_40794973/article/details/103553402" target="_blank" rel="noopener">资料</a>之后发现，原来是app.json里面配置了”style”:”v2”,将它删除就好了。</p><h3 id="问题四，有没有跟vue一样的框架？"><a href="#问题四，有没有跟vue一样的框架？" class="headerlink" title="问题四，有没有跟vue一样的框架？"></a>问题四，有没有跟vue一样的框架？</h3><p>直接在开发工具上开发，样式的整理太慢了，就想着能不能引入像vue+element的形式，然后我找到了mpvue，<br><a href="https://blog.csdn.net/lck8989/article/details/82085813" target="_blank" rel="noopener">npmvue构建微信小程序</a>以及<a href="https://www.cnblogs.com/doinbean/p/8708154.html" target="_blank" rel="noopener">mpvue构建小程序(步骤+地址)</a></p><p>下载运行后，又引入了<a href="https://element.eleme.cn/#/zh-CN/component/installation" target="_blank" rel="noopener">element</a>，npm i element-ui -S，<br>记得如果想要在微信开发者工具上看到效果，npm run dev需要一直保持开启。</p><p>（好吧！当我看到colorui的demo就觉得，改成vue这个操作有点多余了，决定放弃这个步骤，不过可以留着，万一以后有用。）</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;#前言&lt;br&gt;本来一直都想了解下微信小程序的开发流程，结果一直拖，拖到现在，好了废话不多说。&lt;br&gt;本次开始尝试开发微信小程序，找到了一个很牛逼的哥们提供的指导流程，&lt;a href=&quot;https://www.zhihu.com/question/50907897/answe
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>mongodb-mac版安装及启动停止</title>
+    <link href="http://sujinfeng.github.io/2020/06/30/mongod-create/"/>
+    <id>http://sujinfeng.github.io/2020/06/30/mongod-create/</id>
+    <published>2020-06-30T08:34:59.000Z</published>
+    <updated>2020-07-07T07:17:46.172Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-ps-aux-grep-mongod-查看进程"><a href="#1-ps-aux-grep-mongod-查看进程" class="headerlink" title="1.ps aux |grep mongod //查看进程"></a>1.ps aux |grep mongod //查看进程</h2><h2 id="2-kill-l-pid"><a href="#2-kill-l-pid" class="headerlink" title="2. kill -l pid"></a>2. kill -l pid</h2><h2 id="3-cd-usr-local-进入local"><a href="#3-cd-usr-local-进入local" class="headerlink" title="3.cd /usr/local 进入local"></a>3.cd /usr/local 进入local</h2><h2 id="4-sudo-curl-O-https-fastdl-mongodb-org-osx-mongodb-osx-ssl-x86-64-4-0-9-tgz-下不下来就百度取消代理，和翻墙"><a href="#4-sudo-curl-O-https-fastdl-mongodb-org-osx-mongodb-osx-ssl-x86-64-4-0-9-tgz-下不下来就百度取消代理，和翻墙" class="headerlink" title="4.sudo curl -O https://fastdl.mongodb.org/osx/mongodb-osx-ssl-x86_64-4.0.9.tgz 下不下来就百度取消代理，和翻墙"></a>4.sudo curl -O <a href="https://fastdl.mongodb.org/osx/mongodb-osx-ssl-x86_64-4.0.9.tgz" target="_blank" rel="noopener">https://fastdl.mongodb.org/osx/mongodb-osx-ssl-x86_64-4.0.9.tgz</a> 下不下来就百度取消代理，和翻墙</h2><h2 id="5-sudo-tar-zxvf-mongodb-osx-ssl-x86-64-4-0-9-tgz"><a href="#5-sudo-tar-zxvf-mongodb-osx-ssl-x86-64-4-0-9-tgz" class="headerlink" title="5.sudo tar -zxvf mongodb-osx-ssl-x86_64-4.0.9.tgz"></a>5.sudo tar -zxvf mongodb-osx-ssl-x86_64-4.0.9.tgz</h2><h2 id="6-sudo-mv-mongodb-osx-x86-64-4-0-9-mongodb"><a href="#6-sudo-mv-mongodb-osx-x86-64-4-0-9-mongodb" class="headerlink" title="6.sudo mv mongodb-osx-x86_64-4.0.9/ mongodb"></a>6.sudo mv mongodb-osx-x86_64-4.0.9/ mongodb</h2><h2 id="7-export-PATH-usr-local-mongodb-bin-PATH-把-MongoDB-的二进制命令文件目录（安装目录-bin）添加到-PATH-路径中"><a href="#7-export-PATH-usr-local-mongodb-bin-PATH-把-MongoDB-的二进制命令文件目录（安装目录-bin）添加到-PATH-路径中" class="headerlink" title="7.export PATH=/usr/local/mongodb/bin:$PATH //把 MongoDB 的二进制命令文件目录（安装目录/bin）添加到 PATH 路径中"></a>7.export PATH=/usr/local/mongodb/bin:$PATH //把 MongoDB 的二进制命令文件目录（安装目录/bin）添加到 PATH 路径中</h2><h2 id="8-sudo-mkdir-p-data-db-首先我们创建一个数据库存储目录-data-db"><a href="#8-sudo-mkdir-p-data-db-首先我们创建一个数据库存储目录-data-db" class="headerlink" title="8.sudo mkdir -p /data/db 首先我们创建一个数据库存储目录 /data/db"></a>8.sudo mkdir -p /data/db 首先我们创建一个数据库存储目录 /data/db</h2><h2 id="9"><a href="#9" class="headerlink" title="9."></a>9.</h2><p>1⃣️cd进入/usr/local/mongodb/bin目录执行sudo mongod 即可启动服务</p><p>2⃣️command+n新建一个终端，输入cd /usr/local/mongodb/bin回车，进入mongodb bin文件夹，随后输入./mongo，回车，连接成功mongodb</p><p>3⃣️关闭mongodb服务</p><p>在新建连接终端里面输入use admin;后再输入db.shutdownServer(),关闭服务;</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;1-ps-aux-grep-mongod-查看进程&quot;&gt;&lt;a href=&quot;#1-ps-aux-grep-mongod-查看进程&quot; class=&quot;headerlink&quot; title=&quot;1.ps aux |grep mongod //查看进程&quot;&gt;&lt;/a&gt;1.ps aux
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>清空html、js和word里的注释</title>
+    <link href="http://sujinfeng.github.io/2020/06/30/clean/"/>
+    <id>http://sujinfeng.github.io/2020/06/30/clean/</id>
+    <published>2020-06-30T08:34:59.000Z</published>
+    <updated>2020-07-07T07:17:46.172Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="js单行注释，两个都可以"><a href="#js单行注释，两个都可以" class="headerlink" title="js单行注释，两个都可以"></a>js单行注释，两个都可以</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[/][/*]+.*</span><br><span class="line"></span><br><span class="line">\/\/.*</span><br></pre></td></tr></table></figure><h3 id="html注释"><a href="#html注释" class="headerlink" title="html注释"></a>html注释</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--[^<span class="string">"]*--&gt;</span></span><br></pre></td></tr></table></figure><h3 id="word里空行"><a href="#word里空行" class="headerlink" title="word里空行"></a>word里空行</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">^p^w^p</span><br><span class="line">^w^p</span><br><span class="line">^p^p</span><br></pre></td></tr></table></figure><p>^p为换行符，^w为空格</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;js单行注释，两个都可以&quot;&gt;&lt;a href=&quot;#js单行注释，两个都可以&quot; class=&quot;headerlink&quot; title=&quot;js单行注释，两个都可以&quot;&gt;&lt;/a&gt;js单行注释，两个都可以&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;t
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>复制用</title>
+    <link href="http://sujinfeng.github.io/2020/06/10/a-cp/"/>
+    <id>http://sujinfeng.github.io/2020/06/10/a-cp/</id>
+    <published>2020-06-10T08:34:59.000Z</published>
+    <updated>2020-07-07T07:17:46.172Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="css常用不好记的"><a href="#css常用不好记的" class="headerlink" title="css常用不好记的"></a>css常用不好记的</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">width: 30px !important; //提高优先级</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;css常用不好记的&quot;&gt;&lt;a href=&quot;#css常用不好记的&quot; class=&quot;headerlink&quot; title=&quot;css常用不好记的&quot;&gt;&lt;/a&gt;css常用不好记的&lt;/h2&gt;&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td clas
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
